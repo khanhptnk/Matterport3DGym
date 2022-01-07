@@ -1,5 +1,5 @@
 # Matterport3DGym
-A gym-like implementation of the Matterport3D simulator (Anderson et al., 2018).
+A gym-like implementation of the [Matterport3D simulator](https://github.com/peteanderson80/Matterport3DSimulator) (Anderson et al., 2018).
 
 # Run experiments
 
