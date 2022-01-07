@@ -1,0 +1,29 @@
+name: dagger_transformer
+task: 'R2R'
+nav_agent:
+  name: NavAgentPREVALENT
+  model:
+    name: VLNBERT
+    vlnbert: 'prevalent'
+    max_instruction_length: 80
+    image_feat_size: 2048
+    angle_feat_size: 128
+    dropout: 0.5
+    featdropout: 0.4
+    lr: 0.00001
+    epsilon: 0.1
+environment:
+  name: Environment
+trainer:
+  name: DaggerTrainer
+  max_steps: 15
+  batch_size: 32
+  log_every: 1000
+  max_iters: 100000
+  main_metric: 'score'
+world:
+  meta_name: MatterportWorldMeta
+  name: MatterportWorld
+  image_feature_file: 'ResNet-152-imagenet.tsv'
+seed: 123
+device_id: 0
